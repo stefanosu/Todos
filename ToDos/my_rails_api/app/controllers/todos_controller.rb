@@ -15,6 +15,7 @@ class TodosController < ApplicationController
 
     def create
         todo = Todo.create(todos_params)
+        @categories = Category.all
         if todo.valid? 
             render json: todo 
         else
