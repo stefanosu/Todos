@@ -10,7 +10,7 @@ class App extends React.Component {
   }
 
     componentDidMount() {
-        fetch('http://localhost:3000/categories', {
+        fetch('http://localhost:3000/getCategories', {
             method: 'GET',
             headers: {
             'Content-type': 'application/json', 
@@ -23,8 +23,9 @@ class App extends React.Component {
         }))
     }
 
+
     newCategory = (data) => {
-      console.log(data);
+      // console.log(data);
       fetch('http://localhost:3000/newCategories',{
         method: 'POST', 
         headers: {
@@ -42,20 +43,39 @@ class App extends React.Component {
       }        
 
     showCategories = () => {
-      console.log(this.state.categories)
+      // console.log(this.state.categories)
       if(this.state.categories.length > -1) {
         return this.state.categories.map(category =>  { 
         return <Category key={category.id} category={category}  
         submitted={this.newCategory}
-        newToDo={this.newToDo}/>
+        newToDo={this.newToDo}
+        removeCategory={this.removeCategory}
+        removeTodo={this.removeTodo}/>
       })
         } else {
           return 'isLoading...'
         }
     }
 
+
+    removeCategory = (id) => {   
+      // console.log(`Im the delete btn this is my id ${id}`)
+      // let id = this.props.category.id
+      fetch(`http://localhost:3000/removeCategories/${id}`, {
+          method: 'DELETE' 
+          })
+          .then(resp => resp.json())
+          .then(categoryData => {
+              this.setState({
+                  categories : categoryData
+              })
+          })        
+      }
+  
+
+
       newToDo = (data, id) => {
-        console.log(data, id)
+        // console.log(data, id)
         fetch('http://localhost:3000/newTodos', {
             method: 'POST',
             headers: {
@@ -72,15 +92,22 @@ class App extends React.Component {
                 categories: data 
               })
             })
+      }
 
-
-          // alert(`hi from toodos ${data} my id is ${id}`)
-          // console.log(data, id);
-          
+      removeTodo = (ID) => {
+        fetch(`http://localhost:3000/removeTodos/${ID}`,{
+            method: 'DELETE'
+        })
+        .then(resp => resp.json())
+        .then(todoData => {
+          this.setState({
+            categories: todoData
+          })
+        })
       }
 
       render() { 
-        console.log(this.state)
+        // console.log(this.state)
         return ( 
           <div className="wrapper">
             <div className="header">

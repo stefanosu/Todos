@@ -15,8 +15,9 @@ class CategoriesController < ApplicationController
     def create 
         # byebug 
         @category = Category.create(category_params)
+        @categories = Category.all
         if @category.valid?   
-            render json: @category
+            render json: @categories
         else 
             render json: {errors: @category.errors.full_messages}
         end
@@ -34,7 +35,11 @@ class CategoriesController < ApplicationController
 
 
     def destroy 
-        @category.destroy  
+        # byebug
+        @category.destroy
+        @categories = Category.all
+        render json: @categories
+
     end
 
 
