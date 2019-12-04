@@ -16,7 +16,7 @@ class TodosController < ApplicationController
     def create
         @todo = Todo.create(todos_params)
         @categories = Category.all
-        if todo.valid? 
+        if @todo.valid? 
             render json: @categories 
         else
             render json: {errors: @todos.error_full_messages}
@@ -36,8 +36,6 @@ class TodosController < ApplicationController
         @todo.destroy
         @categories = Category.all
         render json: @categories
-        # @todos = Todo.all
-        # render json: @todos
     end
 
     private 

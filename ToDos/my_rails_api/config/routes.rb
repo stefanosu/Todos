@@ -11,7 +11,7 @@ patch  '/updateCategories/:id', to: 'categories#update'
 get '/getTodos', to: 'todos#index' 
 post '/newTodos', to: 'todos#create' 
 delete '/removeTodos/:id', to: 'todos#destroy'
-patch   '/updateTodos/:id', to: 'todos#update'
+patch '/updateTodos/:id', to: 'todos#update'
 
 resources :todos 
 resources :categories

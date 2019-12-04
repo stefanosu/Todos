@@ -22,8 +22,8 @@ class App extends React.Component {
             categories: categories
         }))
     }
-
-
+    
+    
     newCategory = (data) => {
       // console.log(data);
       fetch('http://localhost:3000/newCategories',{
@@ -38,28 +38,33 @@ class App extends React.Component {
       .then(resp => resp.json())
       .then(data => 
         this.setState({
-            categories: data
+          categories: data  
         }))
       }        
+      
+          // handleSubmit(e) {
+          //   e.preventDefault();
+          //   const city = this.state.city;
+          //   this.props.onSearchTermChange(city);
+          //   this.setState({
+          //     city: ''
+          //   });
 
     showCategories = () => {
       // console.log(this.state.categories)
-      if(this.state.categories.length > -1) {
         return this.state.categories.map(category =>  { 
         return <Category key={category.id} category={category}  
         submitted={this.newCategory}
         newToDo={this.newToDo}
         removeCategory={this.removeCategory}
         removeTodo={this.removeTodo}/>
-      })
-        } else {
-          return 'isLoading...'
-        }
-    }
+        // updateCategory={this.updateCategory}/>
+      })}
+    
 
 
     removeCategory = (id) => {   
-      // console.log(`Im the delete btn this is my id ${id}`)
+      console.log(`Im the delete btn this is my id ${id}`)
       // let id = this.props.category.id
       fetch(`http://localhost:3000/removeCategories/${id}`, {
           method: 'DELETE' 
@@ -72,6 +77,18 @@ class App extends React.Component {
           })        
       }
   
+      // updateCategory = (id) => {
+      //   console.log(`update this category${id}`)
+      //   fetch(`http://localhost:3000/updateCategories/${id}`, {
+      //       method: 'PATCH',
+      //       headers: {
+      //         'Content-type': 'application/json'
+      //       }, 
+      //         body: JSON.stringify({
+
+      //         })
+      //   })
+      // }
 
 
       newToDo = (data, id) => {
@@ -94,6 +111,7 @@ class App extends React.Component {
             })
       }
 
+
       removeTodo = (ID) => {
         fetch(`http://localhost:3000/removeTodos/${ID}`,{
             method: 'DELETE'
@@ -105,13 +123,17 @@ class App extends React.Component {
           })
         })
       }
-
+    
+      
       render() { 
         // console.log(this.state)
+        // if(this.state.categories.length > 0 ){
+        //   throw new Error('category component crashed!')
+        // } return <React.Fragment>{this.state.categories} </React.Fragment>
         return ( 
           <div className="wrapper">
             <div className="header">
-              <h1>Stefo Todo List</h1>
+              <h1>Todo List</h1>
             </div>
             <div className="form">
                 <Form submitted={this.newCategory} prompt="Categories"/>
@@ -122,5 +144,7 @@ class App extends React.Component {
             </div> 
           );
       }
-    }
+  }
+
+
       export default App; 

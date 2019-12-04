@@ -5,11 +5,10 @@ import Form from './Form.js'
 class Category extends React.Component {
     
 
-
     createNewTodo = data => {
         this.props.newToDo(data, this.props.category.id)
     }
-    
+
     mapOverTodos = () => {
         return this.props.category.todos.map(todo => {
             return <Todo key={todo.id} todo={todo}
@@ -18,17 +17,16 @@ class Category extends React.Component {
         })
     }
     
-
-        handleBtnClick = e => {  
-            let id = this.props.category.id
-            this.props.removeCategory(id)
-        }
+    
+    handleBtnClick = e => {  
+        let id = this.props.category.id
+        this.props.removeCategory(id)
+    }
             
 
         
 
     render() { 
-        console.log(this.props.removeTodo);        
         return ( 
             <div className="category-div"> <button onClick={this.handleBtnClick} className="category-btn">Delete</button>
                 <div className="category-header"> 

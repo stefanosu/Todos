@@ -1,9 +1,10 @@
 import React from 'react'
 
+
 class Form extends React.Component {
     
     state = {  
-        title: ""
+        title: ''
     }
 
     handleChange = (e) => {
@@ -11,18 +12,13 @@ class Form extends React.Component {
     }
     
     handleFormSubmit = (e) => {
-        e.preventDefault() 
-        // this.props.newCategory(this.state)
-        this.props.submitted(this.state.title)
-        // this.props.createNewTodo(this.state.title)
-        // if (this.props.prompt === "Categories") {
-        //     this.props.newCategory(this.state)  
-        // } else if (this.props.prompt === "Todos") {
-        //   console.log("Hi from TODO");     
-        // }
+        e.preventDefault()
+        const title = this.state.title 
+        this.props.submitted(title)
+        
     }
-                
     
+                
 
                 
 render() { 
@@ -38,4 +34,5 @@ render() {
         </form> );
     }
 }
+
 export default Form;
