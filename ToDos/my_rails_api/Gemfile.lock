@@ -69,6 +69,8 @@ GEM
       activesupport
     concurrent-ruby (1.1.5)
     crass (1.0.5)
+    ddtrace (0.33.1)
+      msgpack
     erubi (1.9.0)
     ffi (1.11.3)
     globalid (0.4.2)
@@ -96,7 +98,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
-    puma (>= 4.3.3)
+    puma (4.3.1)
       nio4r (~> 2.0)
     rack (2.0.8)
     rack-cors (1.0.5)
@@ -162,6 +164,7 @@ DEPENDENCIES
   active_model_serializers
   bootsnap (>= 1.4.2)
   byebug
+  ddtrace
   listen (>= 3.0.5, < 3.2)
   puma (~> 4.3)
   rack-cors
