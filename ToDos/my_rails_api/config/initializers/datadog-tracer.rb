@@ -4,4 +4,5 @@ require 'ddtrace'
 
 Datadog.configure do |c|
   c.use :rails, service_name: 'my-rails-app'
+  c.analytics_enabled = false 
 end

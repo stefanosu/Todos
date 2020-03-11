@@ -5,4 +5,4 @@ require_relative 'application'
 Rails.application.initialize!
 
 
-Datadog.configure { |c| c.analytics_enabled = true } 
+# Datadog.configure { |c| c.analytics_enabled = false } 
