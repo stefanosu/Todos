@@ -16,9 +16,11 @@ def create
     @todo = Todo.create(todos_params)
     @categories = Category.all
     if @todo.valid? 
-        render json: @categories 
+    render json: @categories
+    current_span = Datadog.tracer.active_span
+    current_span.set_tag('<todos>', '<val>') unless current_span.nil?
     else
-        render json: {errors: @todos.error_full_messages}
+        render json: { errors: @todos.error_full_messages }
     end 
 end
 
