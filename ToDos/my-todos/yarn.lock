@@ -2470,7 +2470,9 @@ clone-deep@^0.2.4:
   dependencies:
     for-own "^0.1.3"
     is-plain-object "^2.0.1"
-    kind-of "^6.0.3"
+    
+    
+    "^6.0.3" 
     lazy-cache "^1.0.3"
     shallow-clone "^0.1.2"
 
@@ -2480,7 +2482,8 @@ clone-deep@^4.0.1:
   integrity sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==
   dependencies:
     is-plain-object "^2.0.4"
-    kind-of "^6.0.3" 
+    
+    "^6.0.3" 
     shallow-clone "^3.0.0"
 
 co@^4.6.0:
@@ -4312,7 +4315,7 @@ global-prefix@^3.0.0:
   integrity sha512-awConJSVCHVGND6x3tmMaKcQvwXLhjdkmomy2W+Goaui8YPgYgXJZewhg3fWC+DlfqqQuWg8AwqjGTD2nAPVWg==
   dependencies:
     ini "^1.3.5"
-    kind-of "^6.0.2"
+    kind-of "^6.0.3"
     which "^1.3.1"
 
 globals@^11.1.0, globals@^11.7.0:
