@@ -4450,7 +4450,7 @@ has-values@^1.0.0:
   integrity sha1-lbC2P+whRmGab+V/51Yo1aOe/k8=
   dependencies:
     is-number "^3.0.0"
-    kind-of "^4.0.0"
+    kind-of "^6.0.3"
 
 has@^1.0.0, has@^1.0.1, has@^1.0.3:
   version "1.0.3"
@@ -4875,14 +4875,14 @@ is-accessor-descriptor@^0.1.6:
   resolved "https://registry.yarnpkg.com/is-accessor-descriptor/-/is-accessor-descriptor-0.1.6.tgz#a9e12cb3ae8d876727eeef3843f8a0897b5c98d6"
   integrity sha1-qeEss66Nh2cn7u84Q/igiXtcmNY=
   dependencies:
-    kind-of "^3.0.2"
+    kind-of "^6.0.3"
 
 is-accessor-descriptor@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-accessor-descriptor/-/is-accessor-descriptor-1.0.0.tgz#169c2f6d3df1f992618072365c9b0ea1f6878656"
   integrity sha512-m5hnHTkcVsPfqx3AKlyttIPb7J+XykHvJP2B9bZDjlhLIoEq4XoK64Vg7boZlVWYK6LUY94dYPEE7Lh0ZkZKcQ==
   dependencies:
-    kind-of "^6.0.0"
+    kind-of "^6.0.3"
 
 is-arguments@^1.0.4:
   version "1.0.4"
@@ -4940,14 +4940,14 @@ is-data-descriptor@^0.1.4:
   resolved "https://registry.yarnpkg.com/is-data-descriptor/-/is-data-descriptor-0.1.4.tgz#0b5ee648388e2c860282e793f1856fec3f301b56"
   integrity sha1-C17mSDiOLIYCgueT8YVv7D8wG1Y=
   dependencies:
-    kind-of "^3.0.2"
+    kind-of "^6.0.3"
 
 is-data-descriptor@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-data-descriptor/-/is-data-descriptor-1.0.0.tgz#d84876321d0e7add03990406abbbbd36ba9268c7"
   integrity sha512-jbRXy1FmtAoCjQkVmIVYwuuqDFUbaOeDjmed1tOGPrsMhtJA4rD9tkgA0F1qJ3gRFRXcHYVkdeaP50Q5rE/jLQ==
   dependencies:
-    kind-of "^6.0.0"
+    kind-of "^6.0.3"
 
 is-date-object@^1.0.1:
   version "1.0.1"
@@ -4961,7 +4961,7 @@ is-descriptor@^0.1.0:
   dependencies:
     is-accessor-descriptor "^0.1.6"
     is-data-descriptor "^0.1.4"
-    kind-of "^5.0.0"
+    kind-of "^6.0.3"
 
 is-descriptor@^1.0.0, is-descriptor@^1.0.2:
   version "1.0.2"
@@ -4970,7 +4970,7 @@ is-descriptor@^1.0.0, is-descriptor@^1.0.2:
   dependencies:
     is-accessor-descriptor "^1.0.0"
     is-data-descriptor "^1.0.0"
-    kind-of "^6.0.2"
+    kind-of "^6.0.3"
 
 is-directory@^0.3.1:
   version "0.3.1"
@@ -5030,7 +5030,7 @@ is-number@^3.0.0:
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-3.0.0.tgz#24fd6201a4782cf50561c810276afc7d12d71195"
   integrity sha1-JP1iAaR4LPUFYcgQJ2r8fRLXEZU=
   dependencies:
-    kind-of "^3.0.2"
+    kind-of "^6.0.3"
 
 is-obj@^1.0.0, is-obj@^1.0.1:
   version "1.0.1"
